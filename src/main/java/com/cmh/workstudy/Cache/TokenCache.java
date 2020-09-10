@@ -8,9 +8,10 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
-/*
+/**
  * @Description token本地缓存，使用guava缓存实现
- * */
+ *
+ */
 //使用直接 TokenCache.setKey("Token_"+username,forgetToken);即可
 public class TokenCache {
     //    创建logback的logger
@@ -22,8 +23,8 @@ public class TokenCache {
             CacheBuilder.newBuilder().initialCapacity(1000).maximumSize(10000).expireAfterAccess(12,TimeUnit.HOURS)
                     //build里面要实现一个匿名抽象类
                     .build(new CacheLoader<String, String>() {
-//                   这个方法是默认的数据加载实现,get的时候，如果key没有对应的值，就调用这个方法进行加载
 
+//                   这个方法是默认的数据加载实现,get的时候，如果key没有对应的值，就调用这个方法进行加载
                         @Override
                         public String load(String s) throws Exception {
 //                        为什么要把return的null值写成字符串，因为到时候用null去.equal的时候，会报空指针异常
