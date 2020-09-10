@@ -18,7 +18,7 @@ public class TokenCache {
     private static Logger logger = LoggerFactory.getLogger(TokenCache.class);
     //    声明一个静态的内存块,guava里面的本地缓存
     private static LoadingCache<String, String> localcache =
-            //构建本地缓存，调用链的方式 ,1000是设置缓存的初始化容量，maximumSize是设置缓存最大容量，当超过了最大容量，guava将使用LRU算法（最少使用算法），来移除缓存项
+            //构建本地缓存，调用链的方式 ,initialCapacity（1000）是设置缓存的初始化容量，maximumSize是设置缓存最大容量，当超过了最大容量，guava将使用LRU算法（最少使用算法），来移除缓存项
             //expireAfterAccess(12,TimeUnit.HOURS)设置缓存有效期为12个小时
             CacheBuilder.newBuilder().initialCapacity(1000).maximumSize(10000).expireAfterAccess(12,TimeUnit.HOURS)
                     //build里面要实现一个匿名抽象类
