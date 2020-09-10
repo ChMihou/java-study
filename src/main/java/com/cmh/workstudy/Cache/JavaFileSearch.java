@@ -1,7 +1,7 @@
 package com.cmh.workstudy.Cache;
 
 /*
-    使用递归找出某目录("C:\\JavaProducts")下的所有子目录以及子文件
+    使用递归找出某目录("D:\data")下的所有子目录以及子文件
 */
 
 import java.util.*;
