@@ -18,10 +18,12 @@ public class JavaFileSearch{
 
     private static List<String> getAllFilePaths(File filePath,List<String> filePaths){
         File[] files = filePath.listFiles();
+        //判断目录内是否还有文件
         if(files == null){
             return filePaths;
         }
         for(File f:files){
+            //判断文件是否为目录
             if(f.isDirectory()){
                 filePaths.add(f.getPath());
                 getAllFilePaths(f,filePaths);
