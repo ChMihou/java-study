@@ -1,5 +1,6 @@
 package com.cmh.workstudy.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.validation.constraints.Email;
@@ -8,7 +9,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 
-public class Parameter {
+public class Parameter implements Serializable {
+
+    private static final long serialVersionUID = 4558799993166197039L;
 
     @NotNull(message="姓名不能为空")
     private String name;
