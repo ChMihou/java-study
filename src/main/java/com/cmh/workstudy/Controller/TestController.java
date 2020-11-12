@@ -43,4 +43,9 @@ public class TestController {
     public String param(){
         return "paramer";
     }
+
+    @RequestMapping("addbutton")
+    public String addbutton(){
+        return "addbutton";
+    }
 }

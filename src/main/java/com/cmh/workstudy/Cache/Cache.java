@@ -1,5 +1,8 @@
 package com.cmh.workstudy.Cache;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cache implements Comparable<Cache>{
     // 键
     private Object key;
@@ -77,5 +80,10 @@ public class Cache implements Comparable<Cache>{
     @Override
     public int compareTo(Cache o) {
         return 0;
+    }
+
+    public static void main(String[] args){
+        List<String> values = new ArrayList<>();
+        System.out.println(values.toString());
     }
 }

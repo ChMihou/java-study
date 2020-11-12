@@ -1,4 +1,4 @@
-package com.cmh.workstudy.Cache;
+package com.cmh.workstudy.Thread;
 
 public class ThreadLocalExsample {
     /**

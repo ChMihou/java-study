@@ -1,4 +1,4 @@
-package com.cmh.workstudy.Cache;
+package com.cmh.workstudy.Thread;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
